@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./mycss.css?version=1"></link>
  
 <style>
-ul {
+ul.style1 {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ ul {
     background-color: #333;
 }
 
-li {
+li.stylelist {
     float: left;
 }
 
@@ -39,12 +39,12 @@ li a:hover:not(.active) {
 </head>
 
 <body style="background: rgba(255, 255, 255, 0.85)">
-<ul>
-  <li><a class="active" href="index.html">Home</a></li>
-  <li><a href="research.html">Research Projects</a></li>
-  <li><a href="publication.html">Publications</a></li>
+<ul class='style1'>
+  <li class='stylelist'><a class="active" href="index.html">Home</a></li>
+  <li class='stylelist'><a href="research.html">Research Projects</a></li>
+  <li class='stylelist'><a href="publication.html">Publications</a></li>
   <!--<li><a href="blog.html" >Blog</a></li>-->
-  <li><a href="SAHAY_TANVI_RESUME2017.pdf" target="_blank">Resume</a></li>
+  <li class='stylelist'><a href="SAHAY_TANVI_RESUME2017.pdf" target="_blank">Resume</a></li>
 </ul>
 <div id="home">
 <div id="container" style="width:1000px;height: 180px;margin-left:140px;">
@@ -67,18 +67,52 @@ li a:hover:not(.active) {
 
 <div id="container" style="width:900px; margin-left:180px;">
 
-    <div id="image" style="display:inline;">
 
-    </div>
 
     <div id="texts" style="display:inline;"> 
         <img src="IMG.jpg" style="width:160px; float:left; margin-right:40px; border-radius:50%">
-        <p align="justify">I am a second year graduate student with the <a href="https://www.cics.umass.edu/" style="color:Teal;text-decoration-style:dotted">College of Information and Computer Science</a> at <a href="https://www.umass.edu/" style="color:Teal;text-decoration-style:dotted"> UMass Amherst</a>. I finished my bachelors in Electronics and Communication Engineering in the year 2012 from Birla Institute of Technology Mesra, Ranchi. I am interested in natural language processing and deep learning research and their applications in the real world. Checkout my <a href="SAHAY_TANVI_resume2017.pdf" target="_blank" style="color:Teal;text-decoration-style:dotted">resume</a> to know more about my work. </p>
+        <div style="display:inline;">
+        <br>
+        <p align="justify">I am a second year masters student with the <a href="https://www.cics.umass.edu/" style="color:Teal;text-decoration-style:dotted">College of Information and Computer Science</a> at <a href="https://www.umass.edu/" style="color:Teal;text-decoration-style:dotted"> University of Massachusetts Amherst</a>. I am working as a research student at the <a href="http://www.iesl.cs.umass.edu/" style="color:Teal;text-decoration-style:dotted">Information Extraction and Synthesis Lab</a> at UMass, working with Professor <a href="https://people.cs.umass.edu/~mccallum/" style="color:Teal;text-decoration-style:dotted">Andrew McCallum</a> on the <a href="https://openreview.net/", style="color: Teal;text-decoration-style: dotted">OpenReview</a> project, where I focus on experimenting with different techniques of learning the expertise of a researcher for the purpose of obtaining automated and high confidence peer-review matches. I also worked as an intern with the Reseacrh and Development team at Lexalytics, where I focused on obtaining meaningful clusters of phrases in order to group similar phrase segments together, based on their semantic similarity.
+        <br><br>
+        <p align="justify">My prime areas of interest include <b>machine learning</b>, <b>deep learning</b> and their application to the fields of <b>natural language processing</b> and <b>computer vision</b>. I am also intrigued by the application of different supervised and unsupervised machine learning techniques to real world arenas like finance and medicine. I have successfully completed several machine learning projects that included aspects of research, programming, data visualization, database management and documentation. I have been the fortunate co-authors of several conference papers, two of which have also received the best paper award.
+        </div>
 
     </div>
 
 </div>
-<p style="width:500px;height:20px;position:absolute;top:640;left:440;border-radius:25px;background-color:Teal;text-align:center;color:#ffffff">Web Design By Tanvi Sahay</p>
+
+
+<br><br>
+
+<h2 style = "color:#000000; font-family:'Sofia'; font-size:30px; margin-left:180px;">Relevant Subjects</h2>
+<hr style=" margin-top:-10px; border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0,0,0, 0.75), rgba(0,0,0, 0.75), rgba(0,0,0, 0)); margin-left:180px; width:980px;">
+
+<div id="container" style="width:900px; margin-left:180px;">
+
+<ul>
+  <li>Fall 2017</li>
+    <ul>
+      <li> CS 682 Neural Networks - A Modern Approach</li>
+      <li> CS 689 Reinforcement Learning</li>
+    </ul>
+  <br>
+  <li>Spring 2017</li>
+    <ul>
+      <li> CS 645 Database Design and Implementation</li>
+      <li> CS 590V Data Visualization</li>
+    </ul>
+  <br>
+  <li>Fall 2016</li>
+    <ul>
+      <li>CS 589 Machine Learning</li>
+      <li>CS 585 Introduction to Natural Language Processing</li>
+    </ul>
+</ul>
+
+</div>
+
+<p style="width:500px;height:20px;position:absolute;top:1300;left:420;border-radius:25px;background-color:Teal;text-align:center;color:#ffffff">Web Design By Tanvi Sahay</p>
 </body>
 
 
