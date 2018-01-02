@@ -1,0 +1,159 @@
+<html>
+<head>
+    <title> tsahay </title>
+    <meta charset="utf-8"/>
+<link href='//fonts.googleapis.com/css?family=Allan' rel='stylesheet'>
+<link href='//fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<link href='//fonts.googleapis.com/css?family=Alegreya Sans' rel='stylesheet'>
+
+    <link rel="stylesheet" type="text/css" href="./mycss.css?version=1"></link>
+ 
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #00CED1;
+}
+
+button.accordion {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 22px;
+    transition: 0.4s;
+    font-family: Times New Roman;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #333;
+    border-left: 10px solid #00CED1;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    font-size:18px;
+}
+    </style>
+</head>
+
+<body>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="research.html">Research</a></li>
+  <li><a href="publication.html">Publications</a></li>
+  <li><a href="http://www-edlab.cs.umass.edu/~tsahay/" target="_blank">Blog</a></li>
+  <li><a href="SAHAY_TANVI_resume2017.pdf" target="_blank">Resume</a></li>
+</ul>
+<div style="width:1000px;margin:auto;margin-top:100px;">
+
+<button class="accordion">Concept/Theme Roll Up</button>
+<div class="panel">
+
+  <p align="justify" style="font-family:'Times New Roman'">The key ideas summarizing a set of sentences can be succinctly represented with the help of short key-phrases that provide information about the theme(s) present in the targeted text. These key-phrases can be used as a means to provide users with information regarding the primary themes present in a set of documents and grouping similar phrases pertaining to the same theme together can allow the users to query the theme that they are interested in, without acknowledging the other topics.</p>
+
+  <p align="justify" style="font-family:'Times New Roman'">In this project, me and my team experimented with several methods of performing roll up of similar themes, with focus on different ways of representing phrases in such as way that their inherent similarity stays intact. We divided our phrase representation methods into three categories: based only on the words contained in the phrase, based only on the context of the phrase and based on both the words and the context of the phrase. We experimented with basic models such as averaging of word embeddings to get phrase embedding and with more complex models such as word2vec where each phrase was considered a separate word and weights were initialized randomly as well as with word2vec with weights initialized with pre-computed vectors. We also worked on a model called Feature-Rich Comositional Transform, which makes use of weighted features combined with word embeddings to prepare a distributed representation of phrases.</p>
+
+  <p style="font-family:'Times New Roman'"> <a href="lexalytics_report.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+
+</div>
+
+<button class="accordion" style="margin-top:20px;">Schema Matching using Machine Learning</button>
+<div class="panel">
+  <p align="justify" style="font-family:'Times New Roman'"> Schema Matching is a method of finding attributes that are either similar to each other linguistically or represent the same information. In this project, we took a hybrid approach at solving this problem by making use of both the provided data and the schema name to perform one to one schema matching and introduced the idea of a global dictionary to achieve one to many schema matching. We experimented with two methods of one to one matching and compare both based on their F-scores, precision and recall. In the first method for one-to-one matching, we clustered the train schema using both SOM and K-Means and calculated the centrid of each cluster. We then assigned a cluster to each schema name in the test database, based on its euclidean distance from the centroids. In the second method, we combined all schema names from both the train and test databases and clustered the final set of attributes using SOM and K-Means. For calculating one-to-one matching within each cluster, we used edit distance to find the closest match between a train and test schema. </p>
+  <p align="justify" style="font-family:'Times New Roman'"> Each of the methods that we tried have their own utility, with the second method having the advantage that it would create clusters with only test attributes or only train attributes as well. For one-to-any matching, we prepared a dictionary that contained all possible one-to-many matches for the attributes "name" and "address". The advantage of this method is that custom dictionaries can be prepared based on the domain, which would require a domain expert once, thus minimizing human involvement.</p>
+
+  <p style="font-family:'Times New Roman'"> <a href="Schema_Matching.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+</div>
+
+
+<button class="accordion" style="margin-top:20px;">Sentence Generation using Fan Theories</button>
+<div class="panel">
+  <p align="justify" style="font-family:'Times New Roman'"> In the last 20 years, American entertainment, ranging from movies to television shows to comic books to novels, has seen a colossal increase in its fan following, and with this increase, more and more people have begun to keep a story going even when it is on hiatus, giving rise to fan-proposed theories of what the future of a story might be. In this projcet, these fan theories have been used as the data set over which several models have been trained and their generative performance has been compared. </p>
+
+<p align="justify" style="font-family:'Times New Roman'">Three generative models, N-grams, Hidden Markov Models(HMM) and Long- Short Term Memory(LSTM) recurrent neural networks have been explored and their results compared to analyze how they perform for the proposed task. The Stanford OpenIE package has been used to extract relational tuples while the CoreNLP package has been used to tokenize the input text, perform part-of- speech tagging and find the named entities in the text. This information has been utilized in combination 1 with the N-gram models to propose three different methods of sentence generation and assess how they perform as compared to other baseline models. Frequency of occurrence of each character name from the chosen show has been computed and sentence for the five most famous characters have been generated, with each sentence generation task being seeded with the name of the character. Comparison has been done on the basis of how understandable a sentence is and how much information it conveys. Human subjects with both presence as well as absence of domain knowledge were asked to rate the sentences, in order to obtain an understanding of how well each model maps domain knowledge in its generative methodology. </p>
+
+  <p style="font-family:'Times New Roman'"> <a href="Sentence_Generation.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+
+</div>
+
+<button class="accordion" style="margin-top:20px;">Architecture Classification of Indian Monuments</button>
+<div class="panel">
+  <p align="justify" style="font-family:'Times New Roman'"> In this project, the task of architecture classification for monuments and buildings
+from the Indian subcontinent was explored. Five major classes of architecture were taken and various supervised learning methods, both probabilistic and non-probabilistic, were experimented with in order to classify the monuments into one of the five categories. The categories were: ’Ancient’, ’British’, ’IndoIslamic’,’Maratha’ and ’Sikh’. Local ORB feature descriptors were used to represent each image and clustering was applied to quantize the obtained features to a smaller size. Other than the typical method of using features to do an image-wise classification, another method where descriptor wise classification is done was also explored. In this method, image label was provided as the mode of the labels of the descriptors of that image. It was found that among the different classifiers, k nearest neighbors for the case of descriptor-wise classification performed the best. </p>
+
+  <p style="font-family:'Times New Roman'"> <a href="Architecture.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+
+</div>
+
+<button class="accordion" style="margin-top:20px;">ATOM: A Tool for Music Transcription</button>
+<div class="panel">
+  <p align="justify" style="font-family:'Times New Roman'"> Lack of proper resources and potent technology have made transcription of music pieces to its written sheet music format and its easily accessible and secure storage a major problem within the music community. Not only
+have insecure storage methods such as cell phones and computers led to an increasing rise in the cases of stolen or leaked music pieces, mishaps to these fragile devices have also caused a great loss to musicians and their loved ones the world over. Though applications and devices have been developed to recognize musical notes, most require an excessive amount of paraphernalia, few convert the recognized notes to sheet music and none have the ability to provide safe storage to these converted music sheets. Through this project, development of the device A.T.O.M. - A TOol for Music transcription, has been proposed, to allow automated recording, transcription and storage of music pieces in its sheet format onto a secure server, which only the particular user will have access to. The purpose of this device is to allow musicians to store and retrieve their creations easily from any part of the globe by connecting to the secure server and accessing required files by submitting the appropriate login identification and password. The device will make use of audio as well as image processing to provide dual identification of the note being played, utilize cloud computing to store the converted music onto a secure remote server along with providing an easy to use and compact user interface. </p>
+
+  <p style="font-family:'Times New Roman'"> <a href="ATOM.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+
+</div>
+
+<button class="accordion" style="margin-top:20px;">Texas Instruments Innovation Challenge - India Design Contest 2015</button>
+<div class="panel">
+  <h3 style="font-family:'Times New Roman'"> Development of a stand-alone speech recognition SoC to assist in mail and courier sorting</h3>
+  <p align="justify" style="font-family:'Times New Roman'"> The present system of manual sorting of packages is the cause of some of the most common reasons for delay in delivery of mails and courier packages. These include unavailability of complete and legible addresses on
+the packages and misplacement of packages at the sorting facility itself, which is a result of the unavoidable factor which comes into play at each level i.e. the factor of human error. The aim of this project was to develop a reusable voice recognition system on chip for the purpose of sorting of packages in the central and local sorting hubs of logistics companies, to enhance their productivity and minimize the chances of delay in delivery. The project employed a speech storage and recognition chip to store a consignee’s address at the packaging facility, which was then attached to the corresponding package. This chip would act as a beacon to let the employees at the sorting facility locate a package by simply calling out its destination address, thus minimizing the possibility of misplacement. </p>
+
+  <p style="font-family:'Times New Roman'"> This project was prepared for the Texas Instruments Design Contest 2015 and proceeded to the quaterfinals of the competition. A patent has been filed on this technology with the Government of India under the name - <strong>Apparatus and Method for Locating Misplaced Item</strong>.
+  <p style="font-family:'Times New Roman'"> <a href="mail_sorting.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  }
+}
+</script>
+
+</div>
+</body>
+</html>
