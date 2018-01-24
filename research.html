@@ -78,7 +78,17 @@ div.panel {
 <div style="width:1000px;margin:auto;margin-top:100px;">
 
 
-<button class="accordion">Automatic Colorization of Videos</button>
+<button class="accordion">Analysis of RL Algorithms for bigram language model MDP</button>
+<div class="panel">
+
+  <p align="justify" style="font-family:'Times New Roman'">Statistical language models a.k.a language models are probabilistic models that assign probability to the occurrence of a sentence using information of co-occurrence of words extracted from a corpus of baseline text. In this project, I explore how a simple 2-gram or bigram model can be modeled as an MDP and how different RL algorithms perform in learning a policy that can produce fixed length coherent and meaningful sentences. One of the prime challenges of defining an MDP is to design a reward function that is in accordance with the goal you are trying to achieve. In this project, I explored 4 different reward functions and compared them in order to determine which ones best reflected the desired objective, by computing a coherence score for sentences produced by the agent and comparing it with sample sentences extracted from the training corpus. I analyzed and compared the performance of three RL algorithms: SARSA, Q-Learning and Q(λ), on this task on the basis of their average return of rewards.</p>
+
+  <p style="font-family:'Times New Roman'">Codes for this project are available on my github page (RL-for-NLP-Project). Read More about it <a href="rl-for-nlp.pdf" target="_blank" style="color:Teal;">here.</a> </p>
+
+</div>
+
+
+<button class="accordion" style="margin-top:20px;">Automatic Colorization of Videos</button>
 <div class="panel">
 
   <p align="justify" style="font-family:'Times New Roman'">Realistic colorization of videos has been of great interest to the artistic community, primarily for restoring historical color films and colorizing legacy videos. In this project, we experimented with several methods in order to automatically colorize videos on a frame-by-frame basis. We focused on rectifying two primary issues encountered with video colorizations : lack of color consistency between subsequent frames and desaturated colorization of individual frames. We used an LSTM to encode the sequential information of  videos and thus maintain color consistency between successive frames. We used a class-rebalancing loss to re-weight color predictions on the basis of their rarity. We evaluated out results using average per-pixel RMSE over all frames in a single video and also set up a colorization “Turing Test” to determine which models gave the most realistic colorization.</p>
@@ -107,7 +117,7 @@ div.panel {
   <p align="justify" style="font-family:'Times New Roman'"> Schema Matching is a method of finding attributes that are either similar to each other linguistically or represent the same information. In this project, we took a hybrid approach at solving this problem by making use of both the provided data and the schema name to perform one to one schema matching and introduced the idea of a global dictionary to achieve one to many schema matching. We experimented with two methods of one to one matching and compare both based on their F-scores, precision and recall. In the first method for one-to-one matching, we clustered the train schema using both SOM and K-Means and calculated the centrid of each cluster. We then assigned a cluster to each schema name in the test database, based on its euclidean distance from the centroids. In the second method, we combined all schema names from both the train and test databases and clustered the final set of attributes using SOM and K-Means. For calculating one-to-one matching within each cluster, we used edit distance to find the closest match between a train and test schema. </p>
   <p align="justify" style="font-family:'Times New Roman'"> Each of the methods that we tried have their own utility, with the second method having the advantage that it would create clusters with only test attributes or only train attributes as well. For one-to-any matching, we prepared a dictionary that contained all possible one-to-many matches for the attributes "name" and "address". The advantage of this method is that custom dictionaries can be prepared based on the domain, which would require a domain expert once, thus minimizing human involvement.</p>
 
-  <p style="font-family:'Times New Roman'"> <a href="Schema_Matching.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+  <p style="font-family:'Times New Roman'"> Codes for this project are available on my github page (Schema-Matching-using-Machine-Learning). Read More about the project <a href="Schema_Matching.pdf" target="_blank" style="color:Teal;">here.</a> </p>
 </div>
 
 
@@ -127,7 +137,7 @@ div.panel {
   <p align="justify" style="font-family:'Times New Roman'"> In this project, the task of architecture classification for monuments and buildings
 from the Indian subcontinent was explored. Five major classes of architecture were taken and various supervised learning methods, both probabilistic and non-probabilistic, were experimented with in order to classify the monuments into one of the five categories. The categories were: ’Ancient’, ’British’, ’IndoIslamic’,’Maratha’ and ’Sikh’. Local ORB feature descriptors were used to represent each image and clustering was applied to quantize the obtained features to a smaller size. Other than the typical method of using features to do an image-wise classification, another method where descriptor wise classification is done was also explored. In this method, image label was provided as the mode of the labels of the descriptors of that image. It was found that among the different classifiers, k nearest neighbors for the case of descriptor-wise classification performed the best. </p>
 
-  <p style="font-family:'Times New Roman'"> <a href="Architecture.pdf" target="_blank" style="color:Teal;">Read More about the project here.</a> </p>
+  <p style="font-family:'Times New Roman'"> Codes for this project are available on my github page (Architecture-Classification). Read More about the project <a href="Architecture.pdf" target="_blank" style="color:Teal;">here.</a> </p>
 
 </div>
 
