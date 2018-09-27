@@ -77,8 +77,16 @@ div.panel {
 </ul>
 <div style="width:1000px;margin:auto;margin-top:100px;">
 
+<button class="accordion">A Survey on Distributed Representations of Words</button>
+<div class="panel">
 
-<button class="accordion">Analysis of RL Algorithms for bigram language model MDP</button>
+<p align="justify" style="font-family:'Times New Roman'">A real valued representation of lexical entities, based on semantic, grammatical or syntactic information, is a popular way to encode information contained in them. These encoded ‘embeddings’ can then be used as standalone features for tasks such as recognizing similar words, creating word clusters and analyzing parent-child relationships or act as additional features for other NLP tasks. This survey looked at the different methods in which words can be represented as vectors of real valued elements and how these methods have evolved over time. The survey focused primarily on primarily on distributed representations for words and compare and contrast the different popular approaches for the same. In addition, it also delves into the discussion of certain properties of distributed representations of words which make them useful for a wide variety of NLP tasks.</p>
+
+<p style="font-family:'Times New Roman'"> Complete text of the survey can be found <a href="survey-distributed-representations.pdf" target="_blank" style="color:Teal;">here</a>. Please provide due citation for the paper, if using it as a reference material.</p>
+
+</div>
+
+<button class="accordion" style="margin-top:20px;">Analysis of RL Algorithms for bigram language model MDP</button>
 <div class="panel">
 
   <p align="justify" style="font-family:'Times New Roman'">Statistical language models a.k.a language models are probabilistic models that assign probability to the occurrence of a sentence using information of co-occurrence of words extracted from a corpus of baseline text. In this project, I explore how a simple 2-gram or bigram model can be modeled as an MDP and how different RL algorithms perform in learning a policy that can produce fixed length coherent and meaningful sentences. One of the prime challenges of defining an MDP is to design a reward function that is in accordance with the goal you are trying to achieve. In this project, I explored 4 different reward functions and compared them in order to determine which ones best reflected the desired objective, by computing a coherence score for sentences produced by the agent and comparing it with sample sentences extracted from the training corpus. I analyzed and compared the performance of three RL algorithms: SARSA, Q-Learning and Q(λ), on this task on the basis of their average return of rewards.</p>
